@@ -33,10 +33,10 @@
 		// 1、alpha(opacity=0)
 		// 2、filter:progid:DXImageTransform.Microsoft.gradient( GradientType= 0 , startColorstr = ‘#ccccc’, endColorstr = ‘#ddddd’ );
 		// 利用正则匹配
-		fliter = elem.style.filter.match(/progid:DXImageTransform.Microsoft.Alpha\(.?opacity=(.*).?\)/i) || elem.style.filter.match(/alpha\(opacity=(.*)\)/i);
+		filter = elem.style.filter.match(/progid:DXImageTransform.Microsoft.Alpha\(.?opacity=(.*).?\)/i) || elem.style.filter.match(/alpha\(opacity=(.*)\)/i);
 
-		if (fliter) {
-			var value = parseFloat(fliter);
+		if (filter) {
+			var value = parseFloat(filter);
 			if (!NaN(value)) {
 				// 转化为标准结果
 				return value ? value / 100 : 0;
