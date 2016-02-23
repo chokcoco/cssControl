@@ -37,7 +37,7 @@
 
 		if (filter) {
 			var value = parseFloat(filter);
-			if (!NaN(value)) {
+			if (!isNaN(value)) {
 				// 转化为标准结果
 				return value ? value / 100 : 0;
 			}
