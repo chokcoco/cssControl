@@ -77,12 +77,14 @@
 				// IE 下获取透明度
 				if (style == "opacity") {
 					getIEOpacity(elem);
-					// IE687 下获取浮动使用 styleFloat
+
+				// IE687 下获取浮动使用 styleFloat
 				} else if (style == "float") {
 					return elem.currentStyle.getAttribute("styleFloat");
-					// 未设置元素的高宽，获取的值是 auto
-					// 这里要获取精确的 px 值，使用 elem.getBoundingClientRect 进行 hack
-					// 跨浏览器的方法 getBoundingClientRect 可以获得元素四个点相对于文档视图左上角的值 top、left、bottom、right ，通过计算就可以容易地获得准确的元素大小
+
+				// 未设置元素的高宽，获取的值是 auto
+				// 这里要获取精确的 px 值，使用 elem.getBoundingClientRect 进行 hack
+				// 跨浏览器的方法 getBoundingClientRect 可以获得元素四个点相对于文档视图左上角的值 top、left、bottom、right ，通过计算就可以容易地获得准确的元素大小
 				} else if ((style == "width" || style == "height") && (elem.currentStyle[style] == "auto")) {
 					var clientRect = elem.getBoundingClientRect();
 
@@ -107,6 +109,7 @@
 				// IE678 设置透明度叫 filter ，不是 opacity
 				style = "filter";
 
+				// !!转换为 boolean 类型进行判断
 				if (!!window.XDomainRequest) {
 					value = "progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=" + value * 100 + ")";
 				} else {
