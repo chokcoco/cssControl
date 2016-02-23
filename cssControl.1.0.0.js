@@ -32,8 +32,8 @@
 		// 早期的 IE 中要设置透明度有两个方法：
 		// 1、alpha(opacity=0)
 		// 2、filter:progid:DXImageTransform.Microsoft.gradient( GradientType= 0 , startColorstr = ‘#ccccc’, endColorstr = ‘#ddddd’ );
-		// 利用正则匹配
-		filter = elem.style.filter.match(/progid:DXImageTransform.Microsoft.Alpha\(.?opacity=(.*).?\)/i) || elem.style.filter.match(/alpha\(opacity=(.*)\)/i);
+		// 利用正则匹配，注意 ?: 的用法
+		filter = elem.style.filter.match(/(?:progid:[\w.]+.)?alpha\((?:[^,]+,)?\s*opacity=(\d+)\s*\)/i) || elem.style.filter.match(/alpha\(opacity=(.*)\)/i);
 
 		if (filter) {
 			var value = parseFloat(filter);
