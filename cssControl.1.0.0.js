@@ -72,7 +72,7 @@
 				// }
 				return win.getComputedStyle(elem, null).getPropertyValue(style);
 
-				// 不支持 getComputedStyle 
+			// 不支持 getComputedStyle 
 			} else {
 				// IE 下获取透明度
 				if (style == "opacity") {
