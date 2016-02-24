@@ -7,5 +7,8 @@
 ### 核心方法
 ###### 1) getStyle(elem, style) -- 用于获取结点为 elem 的 style 样式
 ###### 2) setStyle(elem, style, value) -- 用于设置结点为 elem 的 style 样式为 value 
+
+## 博客园相关blog 
+[【CSS进阶】原生JS getComputedStyle等方法解析](http://www.cnblogs.com/coco1s/p/5210667.html)
  
  
