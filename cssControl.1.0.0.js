@@ -8,6 +8,7 @@
  *
  * 2、初始化方法，
  *  1）提供 var cc = new CC() 构造函数，构建 cssControl 实例，然后 cc.getStyle(elem, style) 调用
+ *  2）也可以不使用 new 运算符将 cssControl 实例化 var cc = CC(); 然后 cc.getStyle(elem, style) 调用
  *  2）或者直接 CC().getStyle(elem, style) 进行调用
  *
  * 3、核心方法
